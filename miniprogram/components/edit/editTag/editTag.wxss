@@ -1,0 +1,11 @@
+/* components/edit/editTag/editTag.wxss */
+.edit-tag-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 30rpx 0;
+    padding: 0 20rpx;
+}
+
+.edit-tag-wrapper > .tag-item {
+    margin-right: 20rpx;
+}

@@ -1,0 +1,4 @@
+/* pages/user/components/actionSheet/actionSheet.wxss */
+.action-wrapper {
+    margin-top: 20px;
+}

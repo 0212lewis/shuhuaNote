@@ -1,0 +1,10 @@
+<!--pages/edit/components/imageSelector/imageSelector.wxml-->
+<view class="selector-wrapper">
+    <view class='selected-item' wx:for="{{uploaderList}}" wx:key="index">
+    <!-- <icon class='ui_uploader_item_icon' bindtap='clearImg' data-index="{{index}}" type="clear" size="20" color="red"/> -->
+    <image bindtap='showImg' data-index="{{index}}" src='{{item}}'></image>
+</view>
+<view class='selector' bindtap='upload' wx:if="{{showUpload}}">
+    <van-icon name="plus" size="50px" color="#d9d9d9" />
+</view>
+</view>

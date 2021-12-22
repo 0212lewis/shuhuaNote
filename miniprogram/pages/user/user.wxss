@@ -1,0 +1,47 @@
+/* pages/user/user.wxss */
+.user-container {
+    height: 100vh;
+}
+
+.header-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    width: 100%;
+    box-shadow: gray;
+    background-color: #ffffff;
+    box-shadow: 0 2px 2px -2px #a8a4a429, 0 3px 6px #bdbbbb1f, 0 5px 12px 4px #b6b3b317;
+}
+
+.username {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #868e94;
+    text-align: center;
+}
+
+.note-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40rpx 0
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90px;
+}
+
+.info-num {
+    margin-bottom: 10px;
+    color: #ff9933;
+}
+
+.info-desc {
+    color: #111111;
+    font-size: 16px;
+}

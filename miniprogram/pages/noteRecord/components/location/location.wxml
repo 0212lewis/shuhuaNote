@@ -1,0 +1,5 @@
+<!--pages/noteRecord/components/location/location.wxml-->
+<view class="location-wrapper" wx:if="{{text}}">
+    <van-icon name="location-o" size="10px" color="green" />
+    <view class="text">{{ text }}</view>
+</view>

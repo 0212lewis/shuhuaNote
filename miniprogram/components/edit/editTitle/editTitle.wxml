@@ -1,0 +1,2 @@
+<!--components/edit/editTitle/editTitle.wxml-->
+<van-field value="{{ text }}" placeholder="请输入文章标题..." type="textarea" size="large" autosize bind:change="onTitleChange" />

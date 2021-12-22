@@ -1,0 +1,5 @@
+<!--pages/noteRecord/components/commonTag/commonTag.wxml-->
+<view class="tag-wrapper" style="background-color: {{color}};">
+    <image wx:if="{{icon}}" src="../../../../assets/weatherIcon/{{icon}}.svg"></image>
+    <view style="font-size: {{ fontSize }}px">{{ text }}</view>
+</view>

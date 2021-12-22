@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "common-editor": "../../components/edit/editor/editor",
+    "tag": "../../components/edit/tag/tag",
+    "image-selector": "../../components/edit/imageSelector/imageSelector",
+    "edit-tag": "../../components/edit/editTag/editTag",
+    "edit-title": "../../components/edit/editTitle/editTitle"
+  }
+}

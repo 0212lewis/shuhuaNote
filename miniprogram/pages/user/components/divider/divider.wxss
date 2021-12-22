@@ -1,0 +1,5 @@
+/* pages/user/components/divider/divider.wxss */
+.divider {
+    border-left: 1px solid rgba(94, 93, 93, 0.06);
+    margin: 0 10px
+}

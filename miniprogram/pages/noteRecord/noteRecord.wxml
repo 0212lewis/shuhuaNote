@@ -1,0 +1,10 @@
+<view class="wrapper">
+   <operator bind:onFilter="onFilter" />
+   <view class="record-wrapper" wx:if="{{ data.length > 0 }}">
+      <record-item wx:key="index" wx:for="{{data}}" record="{{item}}"></record-item>
+   </view>
+   <view wx:else>
+      <van-empty description="暂无日志哦" />
+   </view>
+   <van-dialog id="van-dialog" />
+</view>

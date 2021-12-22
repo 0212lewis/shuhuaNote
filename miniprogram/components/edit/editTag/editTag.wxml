@@ -1,0 +1,8 @@
+<!--components/edit/editTag/editTag.wxml-->
+<view class="edit-tag-wrapper">
+    <tag class="tag-item" text="地址" icon="location-o" bind:onClick="chooseAddress"></tag>
+    <tag class="tag-item" text="#天气" bind:onClick="chooseWeather"></tag>
+    <van-dialog use-slot title="今天天气怎么样？" show="{{ weatherModalVisible }}" bind:close="onClose" bind:confirm="onConfirm">
+        <weather-selector bind:onSelectWeather="onSelectWeather"></weather-selector>
+    </van-dialog>
+</view>

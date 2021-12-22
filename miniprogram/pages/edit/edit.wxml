@@ -1,0 +1,27 @@
+<!--pages/edit/edit.wxml-->
+<view class="edit-wrapper">
+    <view wx:if="{{ show }}">
+        <view class="date-wrapper">
+            <tag text="{{ date }}" borderRadius="{{ false }}" fontSize="12px"></tag>
+            <image src="../../assets/weatherIcon/{{ weather }}.svg" wx:if="{{ weather }}"></image>
+        </view>
+        <edit-title text="{{ title }}" bind:onTitleChange="onTitleChange" />
+        <view class="input-wrapper">
+            <common-editor id="common-editor" bind:onInput="onEditorInput"></common-editor>
+        </view>
+        <view class="location-wrapper" wx:if="{{ location }}" bindtap="deleteLocationAction">
+            <van-icon name="location-o" />
+            {{ location }}
+        </view>
+        <edit-tag bind:onChooseLocation="onChooseLocation" bind:onChooseWeather="onChooseWeather" />
+        <view class="submit-wrapper">
+            <van-button round bindtap="reset">重置</van-button>
+            <van-button round type="primary" bindtap="submit">保存</van-button>
+        </view>
+    </view>
+    <view wx:else>
+        <van-empty description="需要登录才能开始写笔记哦~">
+            <van-button round type="danger" class="bottom-button" bindtap="gotoLogin">去登录</van-button>
+        </van-empty>
+    </view>
+</view>

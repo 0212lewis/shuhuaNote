@@ -1,0 +1,4 @@
+/* custom-tab-bar/index.wxss */
+.tabbarContainer {
+    position: relative;
+}

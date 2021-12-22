@@ -1,0 +1,10 @@
+{
+    "component": true,
+    "usingComponents": {
+        "van-image": "@vant/weapp/image/index",
+        "van-button": "@vant/weapp/button/index",
+        "van-divider": "@vant/weapp/divider/index",
+        "common-tag": "../commonTag/commonTag",
+        "location": "../location/location"
+    }
+}

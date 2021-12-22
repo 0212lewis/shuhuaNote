@@ -1,0 +1,40 @@
+/* components/edit/editTag/weatherSelector/weatherSelector.wxss */
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.icon-item {
+    height: 120rpx;
+    padding: 10rpx;
+    flex: 0 0 20%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active {
+    background-color: #eeeeee;
+    border-radius: 8rpx;
+    transition: all 0.3s;
+}
+
+image {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.selected-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20rpx 0;
+}
+
+.selected-title {
+    font-size: 24rpx;
+    color: #4a4444;
+}

@@ -1,0 +1,6 @@
+/* pages/edit/components/tag/tag.wxss */
+.tag-wrapper {
+    padding: 8rpx 14rpx;
+    background-color: #eeeeee;
+    font-size: 28rpx;
+}

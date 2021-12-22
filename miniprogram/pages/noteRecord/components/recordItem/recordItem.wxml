@@ -1,0 +1,25 @@
+<!--pages/noteRecord/components/recordItem/recordItem.wxml-->
+<view class="record-item" bindtap='displayDetail'>
+    <view class="header">
+        <view class="left-pane">
+            <view class="header-tag"></view>
+            <view class="title">《{{ record.title }}》</view>
+            <common-tag text="{{ record.weekday }}"></common-tag>
+            <common-tag icon="{{record.weather}}" text="{{ weatherMap[record.weather] }}"></common-tag>
+        </view>
+        <view class="date">
+            {{record.createTime}}
+        </view>
+    </view>
+    <van-divider />
+    <view class="detail">
+        <rich-text nodes="{{record.content}}" space="nbsp"></rich-text>
+    </view>
+    <view class="footer">
+        <location text="{{ record.location }}" />
+        <view>
+            <van-button style="margin-right: 10rpx;" round color="#FF9933" plain type="primary" size="mini" bindtap="editItem">编辑</van-button>
+            <van-button round color="red" plain type="primary" size="mini" bindtap="deleteRecord">删除</van-button>
+        </view>
+    </view>
+</view>

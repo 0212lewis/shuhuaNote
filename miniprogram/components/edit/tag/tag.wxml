@@ -1,0 +1,9 @@
+<!--pages/edit/components/tag/tag.wxml-->
+<span 
+    class="tag-wrapper" 
+    bindtap="onTap" 
+    style="font-size: {{fontSize}}; {{ borderRadius ? 'border-radius: 10rpx' : '' }}"
+>
+    <van-icon name="{{icon}}"></van-icon>
+    <span>{{ text }}</span>
+</span>

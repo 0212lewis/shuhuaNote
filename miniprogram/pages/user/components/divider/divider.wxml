@@ -1,0 +1,3 @@
+<!--pages/user/components/divider/divider.wxml-->
+<view class="divider" style="height: {{height}}px;">
+</view>

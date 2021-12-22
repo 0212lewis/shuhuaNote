@@ -1,0 +1,48 @@
+/* pages/edit/edit.wxss */
+.edit-wrapper {
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.date-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date-wrapper > image {
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 20rpx;
+}
+
+.input-wrapper {
+    padding: 0 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.input-wrapper > .input-class {
+    height: 10vh;
+}
+
+.location-wrapper {
+    padding: 0 20rpx;
+    font-size: 12px;
+    color: #2c557c;
+}
+
+.select-image {
+    padding: 0 20rpx;
+}
+.submit-wrapper {
+    padding: 0 20rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.van-button--normal {
+    width: 100%;
+}
+.van-button--normal:first-child {
+    margin-bottom: 20rpx;
+}

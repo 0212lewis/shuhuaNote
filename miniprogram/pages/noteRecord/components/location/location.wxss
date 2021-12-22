@@ -1,0 +1,13 @@
+/* pages/noteRecord/components/location/location.wxss */
+.location-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 4rpx;
+    border-radius: 60rpx;
+}
+
+.text {
+    margin-left: 8rpx;
+    font-size: 16rpx;
+    color: #aaa8a8;
+}

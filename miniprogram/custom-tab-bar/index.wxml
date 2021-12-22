@@ -1,0 +1,8 @@
+<!--custom-tab-bar/index.wxml-->
+<view class="tabbarContainer">
+    <van-tabbar active="{{ active }}" bind:change="switchTab">
+        <van-tabbar-item name="{{item.name}}" icon="{{item.icon}}" wx:for="{{list}}" wx:key="index">
+            {{ item.text }}
+        </van-tabbar-item>
+    </van-tabbar>
+</view>

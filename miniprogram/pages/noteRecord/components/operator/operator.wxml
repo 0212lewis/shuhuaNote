@@ -1,0 +1,17 @@
+<!--pages/noteRecord/components/operator/operator.wxml-->
+<view class="operator-wrapper" >
+    <van-search 
+    style="width: 90%;" value="{{keyword}}" placeholder="请输入搜索关键词" bind:search="onSearch"></van-search>
+    <van-icon size="60rpx" color="#5d5454" name="bars" bindtap="showDatePicker" />
+    <van-calendar 
+        type="range"
+        position="top"
+        show="{{ show }}"
+        show-confirm="{{ false }}"
+        max-date="{{ maxDate }}"
+        min-date="{{ minDate }}"
+        bind:close="onClose"
+        bind:confirm="onConfirm"
+    />
+    
+</view>

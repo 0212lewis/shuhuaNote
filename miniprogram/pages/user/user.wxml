@@ -1,0 +1,31 @@
+<view class="user-container">
+    <view class="header-card">
+        <view wx:if="{{ !username }}">
+            <van-button type='primary' bindtap="login">点击登录</van-button>
+        </view>
+        <view wx:else>
+            <van-image width="60" height="60" fit="cover" round src="{{avatar}}"></van-image>
+            <view class="username">
+                {{ username }}
+            </view>
+        </view>
+
+        <view class="note-info">
+            <view class="info-item">
+                <view class="info-num">{{dayNum}} 天</view>
+                <view class="info-desc">坚持写日记</view>
+            </view>
+            <divider height="{{ 40 }}" />
+            <view class="info-item divider">
+                <view class="info-num">{{noteNum}} 篇</view>
+                <view class="info-desc">日记</view>
+            </view>
+            <divider height="{{ 40 }}" />
+            <view class="info-item">
+                <view class="info-num">{{wordsNum}}</view>
+                <view class="info-desc">字数</view>
+            </view>
+        </view>
+    </view>
+    <action-sheet />
+</view>

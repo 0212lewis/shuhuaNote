@@ -1,0 +1,14 @@
+<!--pages/user/components/actionSheet/actionSheet.wxml-->
+<view class="action-wrapper">
+        <van-cell-group inset>
+            <!-- <van-cell size="large" title="更新资料" icon="description" is-link /> -->
+            <van-cell size="large" title="使用帮助" icon="question-o" is-link bindtap="showHelp" />
+            <van-cell size="large" title="软件版本" icon="info-o" value="v1.0.0" />
+        </van-cell-group>
+    <van-dialog 
+        use-slot
+        title="使用方式请联系管理员！"
+        show="{{ helpVisible }}"
+    >
+    </van-dialog>
+    </view>

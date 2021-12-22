@@ -1,0 +1,16 @@
+/* pages/noteRecord/components/commonTag/commonTag.wxss */
+.tag-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 6rpx 12rpx;
+    font-size: 20rpx;
+    font-weight: 400;
+    color: #777777;
+    border-radius: 60rpx;
+    margin-left: 20rpx;
+}
+
+.tag-wrapper > image {
+    height: 25rpx;
+    width: 25rpx;
+}

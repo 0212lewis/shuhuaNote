@@ -1,0 +1,11 @@
+<!--components/edit/editTag/weatherSelector/weatherSelector.wxml-->
+<view class="weather-wrapper">
+    <view class="selected-icon" wx:if="{{ selected }}">
+        <image src="../../../../../assets/weatherIcon/{{selected.value}}.svg"></image>
+        <view class="selected-title">{{ selected.title }}</view>
+    </view>
+    <view class="icon-wrapper">
+        <view class="icon-item {{selected.value === item.value ? 'active' : ''}}" wx:for="{{weatherMap}}" wx:key="index" data-value="{{ item }}" bindtap="onSelect">
+        <image src="../../../../../assets/weatherIcon/{{item.value}}.svg"></image>
+    </view></view>
+</view>
