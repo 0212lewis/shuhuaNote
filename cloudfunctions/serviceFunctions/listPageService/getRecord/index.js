@@ -5,7 +5,8 @@ cloud.init({
 const db = cloud.database()
 
 exports.main = async (event, context) => {
-    const { filterOptions, openId } = event
+    const { filterOptions, openId, pageSize, pageNum } = event
+    const _ = db.command
     let params = {
         _openid: openId
     }
@@ -17,13 +18,23 @@ exports.main = async (event, context) => {
     }
     if (filterOptions && filterOptions.chooseDate){
         const [start, end] = filterOptions.chooseDate
-        params.createTime = db.command.gte(start) && db.command.lte(end)
+        params.createTime = _.and(_.gte(start), _.lte(end))
     }
     try{
-        const res =  await db.collection('record').orderBy('createTime','desc').where(params).get()
+        const countRes = await db.collection('record').where(params).count()
+        const totalPage = Math.ceil(countRes.total / pageSize)
+        let hasMore = true
+        if (pageNum >= totalPage) {
+            hasMore = false
+        }
+        console.log(params)
+        const res =  await db.collection('record').where(params).skip((pageNum - 1) * pageSize).limit(pageSize).orderBy('createTime','desc').get()
         return {
             success: true, 
-            data: res.data,
+            data: {
+                list: res.data,
+                hasMore: hasMore
+            },
             msg: '数据获取成功！'
         }
     } catch(e) {

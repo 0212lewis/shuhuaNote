@@ -3,8 +3,11 @@
 .wrapper {
     width: 100%;
     padding-top: 54px;
-    padding-bottom: calc(100rpx + env(safe-area-inset-bottom));
+    padding-bottom: calc(160rpx + env(safe-area-inset-bottom));
 }
 
-.record-wrapper {
+.record-wrapper > .hasMore {
+    text-align: center;
+    color: #969799;
+    font-size: 24rpx;
 }

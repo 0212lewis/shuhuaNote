@@ -2,6 +2,10 @@
    <operator bind:onFilter="onFilter" />
    <view class="record-wrapper" wx:if="{{ data.length > 0 }}">
       <record-item wx:key="index" wx:for="{{data}}" record="{{item}}"></record-item>
+      <view class="hasMore">
+         <van-loading wx:if="{{hasMore}}" size="16px">加载中...</van-loading>
+         <view wx:else>没有更多啦！</view>
+      </view>
    </view>
    <view wx:else>
       <van-empty description="暂无日志哦" />

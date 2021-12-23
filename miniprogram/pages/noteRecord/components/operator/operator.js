@@ -15,9 +15,9 @@ Component({
     data: {
         show: false,
         keyword: '',
-        chooseDate: [],
+        chooseDate: null,
         minDate: new Date('2021-12-09').getTime(),
-        maxDate: new Date().getTime() + 24*60*60*1000
+        maxDate: new Date().getTime()
     },
 
     /**
@@ -37,6 +37,17 @@ Component({
                 this.triggerEvent('onFilter', { keyword, chooseDate })
             })
         },
+        onReset() {
+            this.setData({
+                show: false,
+                chooseDate: null,
+                minDate: new Date('2021-12-09').getTime(),
+                maxDate: new Date().getTime()
+            }, () => {
+                const { keyword, chooseDate } = this.data
+                this.triggerEvent('onFilter', { keyword, chooseDate })
+            })
+        },
         onClose() {
             this.setData({
                 show: false
@@ -45,7 +56,7 @@ Component({
         onConfirm(e) {
             const [start, end] = e.detail
             this.setData({
-                chooseDate: [new Date(start).getTime(), new Date(end).getTime()],
+                chooseDate: [new Date(start).getTime(), new Date(end).getTime() + 24*60*60*1000],
                 show: false
             }, () => {
                 const { keyword, chooseDate } = this.data

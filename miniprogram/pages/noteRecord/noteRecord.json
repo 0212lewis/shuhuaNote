@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "van-empty": "@vant/weapp/empty/index",
+    "van-loading": "@vant/weapp/loading/index",
     "record-item": "./components/recordItem/recordItem",
     "operator": "./components/operator/operator",
     "common-tag": "./components/commonTag/commonTag"

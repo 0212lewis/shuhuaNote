@@ -1,1 +1,51 @@
 /* pages/displayRecord/displayRecord.wxss */
+.display-wrapper {
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 30rpx 50rpx 40rpx;
+}
+
+.display-wrapper > .title {
+    margin-bottom: 20rpx;
+    font-size: 44rpx;
+    font-style: italic;
+    text-align: center;
+}
+.display-wrapper > .tag {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 20rpx;
+    color: #464444;
+    margin-bottom: 10rpx;
+}
+.display-wrapper > .tag > .createTime {
+    margin-right: 20rpx;
+}
+
+.display-wrapper > .tag > .weather {
+    display: flex;
+    align-items: center;
+}
+.display-wrapper > .tag > .weather > image {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.display-wrapper > image {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.display-wrapper > .detail {
+    line-height: 60rpx;
+    color: #464444;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

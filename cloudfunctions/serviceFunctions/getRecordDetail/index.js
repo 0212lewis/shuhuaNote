@@ -12,7 +12,12 @@ exports.main = async (events, context) => {
         const res = await db.collection('record').doc(id).get()
         return {
             success: true,
-            data: res.data.content,
+            data: {
+                content: res.data.content,
+                title: res.data.title,
+                weather: res.data.weather,
+                createTime: res.data.createTime
+            },
             msg: '获取成功！'
         }
     } catch(e) {

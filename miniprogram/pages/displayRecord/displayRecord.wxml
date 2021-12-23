@@ -1,2 +1,16 @@
 <!--pages/displayRecord/displayRecord.wxml-->
-<rich-text nodes="{{content}}" space="nbsp"></rich-text>
+<view class="display-wrapper">
+    <image src="../../assets/images/bg4.jpeg" ></image>
+    <view class="title">{{title}}</view>
+    <view class="tag">
+        <view class="createTime">{{ createTime }}</view>
+        <view class="weather" wx:if="{{weather}}">
+            天气：
+            <image src="../../assets/weatherIcon/{{weather}}.svg"></image>
+        </view>
+        
+    </view>
+    <scroll-view class="detail" scroll-y="true" style="height: {{scrollViewHeight}}px" >
+        <rich-text nodes="{{content}}" space="nbsp"></rich-text>
+    </scroll-view>
+</view>

@@ -4,6 +4,14 @@ import {
     WEATHER_ENUM
 } from '../../../../utils/consts'
 Component({
+    lifetimes: {
+        attached() {
+            const { text } = this.properties.record
+            this.setData({
+                displayText: text.length > 80 ?  text.substring(0,80) + '...' : text.substring(0,80)
+            })
+        },
+    },
     /**
      * 组件的属性列表
      */
@@ -18,7 +26,8 @@ Component({
      * 组件的初始数据
      */
     data: {
-        weatherMap: WEATHER_ENUM
+        weatherMap: WEATHER_ENUM,
+        displayText: ''
     },
 
     /**
